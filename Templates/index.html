@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Grid Energy Demand Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Smart Grid Energy Demand Prediction</h1>
+        <form action="/predict" method="post" class="form-box">
+            <div class="form-group">
+                <label>Year:</label>
+                <input type="number" name="year" required>
+            </div>
+
+            <div class="form-group">
+                <label>Month (1-12):</label>
+                <input type="number" name="month" required>
+            </div>
+
+            <div class="form-group">
+                <label>Day (1-31):</label>
+                <input type="number" name="day" required>
+            </div>
+
+            <div class="form-group">
+                <label>Hour (0-23):</label>
+                <input type="number" name="hour" required>
+            </div>
+
+            <div class="form-group">
+                <label>Day of Week (0=Mon, 6=Sun):</label>
+                <input type="number" name="dayofweek" required>
+            </div>
+
+            <div class="form-group">
+                <label>Is Weekend (0=No, 1=Yes):</label>
+                <input type="number" name="is_weekend" required>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
